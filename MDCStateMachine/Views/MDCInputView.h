@@ -1,4 +1,4 @@
-//  MDCAppDelegate.h
+//  MDCInputView.h
 //
 //  Copyright (c) 2012 modocache
 //
@@ -26,8 +26,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MDCAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface MDCInputView : UIView
+- (id)initWithTextField:(UITextField *)textField;
 @end

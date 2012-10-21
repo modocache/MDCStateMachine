@@ -13,6 +13,8 @@
 		DA131474163425AC00602299 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA131472163425AC00602299 /* InfoPlist.strings */; };
 		DA131476163425AC00602299 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131475163425AC00602299 /* main.m */; };
 		DA13147A163425AC00602299 /* MDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131479163425AC00602299 /* MDCAppDelegate.m */; };
+		DA13148B163429E000602299 /* MDCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148A163429E000602299 /* MDCRootViewController.m */; };
+		DA13148F16342E5100602299 /* MDCInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148E16342E5100602299 /* MDCInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		DA131477163425AC00602299 /* MDCStateMachine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDCStateMachine-Prefix.pch"; sourceTree = "<group>"; };
 		DA131478163425AC00602299 /* MDCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCAppDelegate.h; sourceTree = "<group>"; };
 		DA131479163425AC00602299 /* MDCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCAppDelegate.m; sourceTree = "<group>"; };
+		DA131489163429E000602299 /* MDCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCRootViewController.h; sourceTree = "<group>"; };
+		DA13148A163429E000602299 /* MDCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCRootViewController.m; sourceTree = "<group>"; };
+		DA13148D16342E5100602299 /* MDCInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCInputView.h; sourceTree = "<group>"; };
+		DA13148E16342E5100602299 /* MDCInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCInputView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,8 @@
 			children = (
 				DA131478163425AC00602299 /* MDCAppDelegate.h */,
 				DA131479163425AC00602299 /* MDCAppDelegate.m */,
+				DA131488163429CE00602299 /* Controllers */,
+				DA13148C16342E3B00602299 /* Views */,
 				DA131470163425AC00602299 /* Supporting Files */,
 			);
 			path = MDCStateMachine;
@@ -88,6 +96,24 @@
 				DA131477163425AC00602299 /* MDCStateMachine-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA131488163429CE00602299 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA131489163429E000602299 /* MDCRootViewController.h */,
+				DA13148A163429E000602299 /* MDCRootViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DA13148C16342E3B00602299 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA13148D16342E5100602299 /* MDCInputView.h */,
+				DA13148E16342E5100602299 /* MDCInputView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +180,8 @@
 			files = (
 				DA131476163425AC00602299 /* main.m in Sources */,
 				DA13147A163425AC00602299 /* MDCAppDelegate.m in Sources */,
+				DA13148B163429E000602299 /* MDCRootViewController.m in Sources */,
+				DA13148F16342E5100602299 /* MDCInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
