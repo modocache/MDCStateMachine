@@ -15,6 +15,8 @@
 		DA13147A163425AC00602299 /* MDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131479163425AC00602299 /* MDCAppDelegate.m */; };
 		DA13148B163429E000602299 /* MDCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148A163429E000602299 /* MDCRootViewController.m */; };
 		DA13148F16342E5100602299 /* MDCInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148E16342E5100602299 /* MDCInputView.m */; };
+		DA97A1D8163A0D100098704E /* MDCStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1D7163A0D100098704E /* MDCStateContext.m */; };
+		DA97A1DC163A10110098704E /* MDCState.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1DB163A10110098704E /* MDCState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		DA13148A163429E000602299 /* MDCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCRootViewController.m; sourceTree = "<group>"; };
 		DA13148D16342E5100602299 /* MDCInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCInputView.h; sourceTree = "<group>"; };
 		DA13148E16342E5100602299 /* MDCInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCInputView.m; sourceTree = "<group>"; };
+		DA97A1D6163A0D100098704E /* MDCStateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCStateContext.h; sourceTree = "<group>"; };
+		DA97A1D7163A0D100098704E /* MDCStateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateContext.m; sourceTree = "<group>"; };
+		DA97A1DA163A10110098704E /* MDCState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCState.h; sourceTree = "<group>"; };
+		DA97A1DB163A10110098704E /* MDCState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,10 @@
 		DA13145A163425AC00602299 = {
 			isa = PBXGroup;
 			children = (
+				DA97A1D6163A0D100098704E /* MDCStateContext.h */,
+				DA97A1D7163A0D100098704E /* MDCStateContext.m */,
+				DA97A1DA163A10110098704E /* MDCState.h */,
+				DA97A1DB163A10110098704E /* MDCState.m */,
 				DA13146F163425AC00602299 /* MDCStateMachine */,
 				DA131468163425AC00602299 /* Frameworks */,
 				DA131466163425AC00602299 /* Products */,
@@ -182,6 +192,8 @@
 				DA13147A163425AC00602299 /* MDCAppDelegate.m in Sources */,
 				DA13148B163429E000602299 /* MDCRootViewController.m in Sources */,
 				DA13148F16342E5100602299 /* MDCInputView.m in Sources */,
+				DA97A1D8163A0D100098704E /* MDCStateContext.m in Sources */,
+				DA97A1DC163A10110098704E /* MDCState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +303,7 @@
 				DA131485163425AC00602299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

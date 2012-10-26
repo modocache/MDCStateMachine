@@ -24,7 +24,10 @@
 
 
 #import "MDCRootViewController.h"
+
 #import "MDCInputView.h"
+#import "MDCStateContext.h"
+#import "MDCState.h"
 
 
 static CGFloat const kTextFieldPaddingTop = 40.0f;
@@ -32,10 +35,18 @@ static CGFloat const kTextFieldWidth = 200.0f;
 static CGFloat const kTextFieldHeight = 40.0f;
 
 
-@interface MDCRootViewController ()
+@interface MDCRootViewController () <UITextFieldDelegate>
+
+@property (nonatomic, strong) MDCStateContext *stateContext;
+@property (nonatomic, strong) MDCState *defaultState;
+@property (nonatomic, strong) MDCState *editTextFieldState;
+@property (nonatomic, strong) MDCState *editCustomInputViewTextFieldState;
+
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UITextField *customInputViewTextField;
+
 - (void)onBackgroundTap:(UITapGestureRecognizer *)tapGestureRecognizer;
+
 @end
 
 
@@ -53,11 +64,13 @@ static CGFloat const kTextFieldHeight = 40.0f;
                                       kTextFieldWidth,
                                       kTextFieldHeight);
     self.textField = [[UITextField alloc] initWithFrame:textFieldRect];
+    self.textField.delegate = self;
     self.textField.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.textField];
 
     textFieldRect.origin.y += kTextFieldHeight + kTextFieldPaddingTop;
     self.customInputViewTextField = [[UITextField alloc] initWithFrame:textFieldRect];
+    self.customInputViewTextField.delegate = self;
     self.customInputViewTextField.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.customInputViewTextField];
     self.customInputViewTextField.inputView =
@@ -67,20 +80,75 @@ static CGFloat const kTextFieldHeight = 40.0f;
         [[UITapGestureRecognizer alloc] initWithTarget:self
                                                 action:@selector(onBackgroundTap:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
+    
+    
+    __block UITextField *textField = self.textField;
+    __block UITextField *customInputViewTextField = self.customInputViewTextField;
+    self.defaultState = [MDCState new];
+
+    self.editTextFieldState = [MDCState new];
+    self.editTextFieldState.onEnter = ^{
+        NSLog(@"self.editTextFieldState.onEnter");
+        [textField becomeFirstResponder];
+    };
+    self.editTextFieldState.onExit = ^{
+        NSLog(@"self.editTextFieldState.onExit");
+        [textField resignFirstResponder];
+        [self.editTextFieldState exit];
+    };
+    
+    self.editCustomInputViewTextFieldState = [MDCState new];
+    self.editCustomInputViewTextFieldState.onEnter = ^{
+        NSLog(@"self.customInputViewTextFieldState.onEnter");
+        [customInputViewTextField becomeFirstResponder];
+    };
+    self.editCustomInputViewTextFieldState.onExit = ^{
+        NSLog(@"self.customInputViewTextFieldState.onEnter");
+        [customInputViewTextField resignFirstResponder];
+        [self.editCustomInputViewTextFieldState exit];
+    };
+    
+    self.stateContext = [[MDCStateContext alloc] initWithState:self.defaultState];
+    for (MDCState *state in @[self.defaultState, self.editTextFieldState, self.editCustomInputViewTextFieldState]) {
+        state.delegate = self.stateContext;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     self.textField = nil;
+    self.customInputViewTextField = nil;
+}
+
+
+#pragma mark - UITextFieldDelegate Protocol Methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if ([textField isEqual:self.textField]) {
+        NSLog(@"%@:%@ -- self.textField", [self class], NSStringFromSelector(_cmd));
+        if ([self.stateContext.currentState isEqual:self.editTextFieldState]) {
+            return YES;
+        } else {
+            [self.stateContext transitionToState:self.editTextFieldState];
+            return NO;
+        }
+    } else {
+        NSLog(@"%@:%@ -- self.customInputViewTextField", [self class], NSStringFromSelector(_cmd));
+        if ([self.stateContext.currentState isEqual:self.editCustomInputViewTextFieldState]) {
+            return YES;
+        } else {
+            [self.stateContext transitionToState:self.editCustomInputViewTextFieldState];
+            return NO;
+        }
+    }
+    return NO;
 }
 
 
 #pragma mark - Internal Methods
 
 - (void)onBackgroundTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-    for (UITextField *textField in @[self.textField, self.customInputViewTextField]) {
-        [textField resignFirstResponder];
-    }
+    [self.stateContext transitionToState:self.defaultState];
 }
 
 @end
