@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA78D5342EDA40939B2D08FF /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C5BFF98055451DBE440E39 /* libPods-test.a */; };
 		DA13146A163425AC00602299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA131469163425AC00602299 /* UIKit.framework */; };
 		DA13146C163425AC00602299 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13146B163425AC00602299 /* Foundation.framework */; };
 		DA13146E163425AC00602299 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13146D163425AC00602299 /* CoreGraphics.framework */; };
@@ -17,14 +18,32 @@
 		DA13148F16342E5100602299 /* MDCInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148E16342E5100602299 /* MDCInputView.m */; };
 		DA54E4F2163A1E80003A224F /* MDCRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */; };
 		DA54E4F6163A23D4003A224F /* MDCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54E4F5163A23D4003A224F /* MDCWebViewController.m */; };
+		DA71F478163A3A890096C959 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA71F477163A3A890096C959 /* SenTestingKit.framework */; };
+		DA71F479163A3A890096C959 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA131469163425AC00602299 /* UIKit.framework */; };
+		DA71F47A163A3A890096C959 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13146B163425AC00602299 /* Foundation.framework */; };
+		DA71F480163A3A890096C959 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA71F47E163A3A890096C959 /* InfoPlist.strings */; };
 		DA97A1D8163A0D100098704E /* MDCStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1D7163A0D100098704E /* MDCStateContext.m */; };
 		DA97A1DC163A10110098704E /* MDCState.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1DB163A10110098704E /* MDCState.m */; };
+		DAD715C2163A3AFF00DFF4E5 /* MDCStateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD715C1163A3AFF00DFF4E5 /* MDCStateSpec.m */; };
+		DAD715C6163A3D6000DFF4E5 /* MDCStateContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD715C5163A3D6000DFF4E5 /* MDCStateContextSpec.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DAD715C3163A3C8100DFF4E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA13145C163425AC00602299 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA131464163425AC00602299;
+			remoteInfo = MDCStateMachine;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A1869160DDD547A88AB2C14B /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
+		C8C5BFF98055451DBE440E39 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA131465163425AC00602299 /* MDCStateMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDCStateMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA131469163425AC00602299 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DA13146B163425AC00602299 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA131469163425AC00602299 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA13146B163425AC00602299 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DA13146D163425AC00602299 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DA131471163425AC00602299 /* MDCStateMachine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDCStateMachine-Info.plist"; sourceTree = "<group>"; };
 		DA131473163425AC00602299 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -40,10 +59,17 @@
 		DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCRootTableViewController.m; sourceTree = "<group>"; };
 		DA54E4F4163A23D4003A224F /* MDCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCWebViewController.h; sourceTree = "<group>"; };
 		DA54E4F5163A23D4003A224F /* MDCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCWebViewController.m; sourceTree = "<group>"; };
+		DA71F476163A3A890096C959 /* MDCStateMachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDCStateMachineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA71F477163A3A890096C959 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DA71F47D163A3A890096C959 /* MDCStateMachineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDCStateMachineTests-Info.plist"; sourceTree = "<group>"; };
+		DA71F47F163A3A890096C959 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA71F484163A3A890096C959 /* MDCStateMachineTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDCStateMachineTests-Prefix.pch"; sourceTree = "<group>"; };
 		DA97A1D6163A0D100098704E /* MDCStateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCStateContext.h; sourceTree = "<group>"; };
 		DA97A1D7163A0D100098704E /* MDCStateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateContext.m; sourceTree = "<group>"; };
 		DA97A1DA163A10110098704E /* MDCState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCState.h; sourceTree = "<group>"; };
 		DA97A1DB163A10110098704E /* MDCState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCState.m; sourceTree = "<group>"; };
+		DAD715C1163A3AFF00DFF4E5 /* MDCStateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateSpec.m; sourceTree = "<group>"; };
+		DAD715C5163A3D6000DFF4E5 /* MDCStateContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateContextSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,17 @@
 				DA13146A163425AC00602299 /* UIKit.framework in Frameworks */,
 				DA13146C163425AC00602299 /* Foundation.framework in Frameworks */,
 				DA13146E163425AC00602299 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA71F472163A3A890096C959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA71F478163A3A890096C959 /* SenTestingKit.framework in Frameworks */,
+				DA71F479163A3A890096C959 /* UIKit.framework in Frameworks */,
+				DA71F47A163A3A890096C959 /* Foundation.framework in Frameworks */,
+				AA78D5342EDA40939B2D08FF /* libPods-test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +105,10 @@
 				DA97A1DA163A10110098704E /* MDCState.h */,
 				DA97A1DB163A10110098704E /* MDCState.m */,
 				DA13146F163425AC00602299 /* MDCStateMachine */,
+				DA71F47B163A3A890096C959 /* MDCStateMachineTests */,
 				DA131468163425AC00602299 /* Frameworks */,
 				DA131466163425AC00602299 /* Products */,
+				A1869160DDD547A88AB2C14B /* Pods-test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				DA131465163425AC00602299 /* MDCStateMachine.app */,
+				DA71F476163A3A890096C959 /* MDCStateMachineTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +127,8 @@
 				DA131469163425AC00602299 /* UIKit.framework */,
 				DA13146B163425AC00602299 /* Foundation.framework */,
 				DA13146D163425AC00602299 /* CoreGraphics.framework */,
+				DA71F477163A3A890096C959 /* SenTestingKit.framework */,
+				C8C5BFF98055451DBE440E39 /* libPods-test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +178,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DA71F47B163A3A890096C959 /* MDCStateMachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAD715C1163A3AFF00DFF4E5 /* MDCStateSpec.m */,
+				DAD715C5163A3D6000DFF4E5 /* MDCStateContextSpec.m */,
+				DA71F47C163A3A890096C959 /* Supporting Files */,
+			);
+			path = MDCStateMachineTests;
+			sourceTree = "<group>";
+		};
+		DA71F47C163A3A890096C959 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA71F47D163A3A890096C959 /* MDCStateMachineTests-Info.plist */,
+				DA71F47E163A3A890096C959 /* InfoPlist.strings */,
+				DA71F484163A3A890096C959 /* MDCStateMachineTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +217,26 @@
 			productName = MDCStateMachine;
 			productReference = DA131465163425AC00602299 /* MDCStateMachine.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DA71F475163A3A890096C959 /* MDCStateMachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA71F487163A3A890096C959 /* Build configuration list for PBXNativeTarget "MDCStateMachineTests" */;
+			buildPhases = (
+				DA71F471163A3A890096C959 /* Sources */,
+				DA71F472163A3A890096C959 /* Frameworks */,
+				DA71F473163A3A890096C959 /* Resources */,
+				DA71F474163A3A890096C959 /* ShellScript */,
+				9CCEC176271942C680328B3D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD715C4163A3C8100DFF4E5 /* PBXTargetDependency */,
+			);
+			name = MDCStateMachineTests;
+			productName = MDCStateMachineTests;
+			productReference = DA71F476163A3A890096C959 /* MDCStateMachineTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -178,6 +260,7 @@
 			projectRoot = "";
 			targets = (
 				DA131464163425AC00602299 /* MDCStateMachine */,
+				DA71F475163A3A890096C959 /* MDCStateMachineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,7 +274,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA71F473163A3A890096C959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA71F480163A3A890096C959 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9CCEC176271942C680328B3D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-test-resources.sh\"\n";
+		};
+		DA71F474163A3A890096C959 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA131461163425AC00602299 /* Sources */ = {
@@ -209,13 +330,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA71F471163A3A890096C959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD715C2163A3AFF00DFF4E5 /* MDCStateSpec.m in Sources */,
+				DAD715C6163A3D6000DFF4E5 /* MDCStateContextSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAD715C4163A3C8100DFF4E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA131464163425AC00602299 /* MDCStateMachine */;
+			targetProxy = DAD715C3163A3C8100DFF4E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DA131472163425AC00602299 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DA131473163425AC00602299 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA71F47E163A3A890096C959 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA71F47F163A3A890096C959 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -296,6 +442,42 @@
 			};
 			name = Release;
 		};
+		DA71F485163A3A890096C959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1869160DDD547A88AB2C14B /* Pods-test.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MDCStateMachine.app/MDCStateMachine";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDCStateMachineTests/MDCStateMachineTests-Prefix.pch";
+				INFOPLIST_FILE = "MDCStateMachineTests/MDCStateMachineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DA71F486163A3A890096C959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1869160DDD547A88AB2C14B /* Pods-test.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MDCStateMachine.app/MDCStateMachine";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDCStateMachineTests/MDCStateMachineTests-Prefix.pch";
+				INFOPLIST_FILE = "MDCStateMachineTests/MDCStateMachineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -313,6 +495,15 @@
 			buildConfigurations = (
 				DA131484163425AC00602299 /* Debug */,
 				DA131485163425AC00602299 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA71F487163A3A890096C959 /* Build configuration list for PBXNativeTarget "MDCStateMachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA71F485163A3A890096C959 /* Debug */,
+				DA71F486163A3A890096C959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
