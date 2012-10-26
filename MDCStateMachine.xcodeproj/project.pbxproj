@@ -19,6 +19,7 @@
 		DA13148F16342E5100602299 /* MDCInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148E16342E5100602299 /* MDCInputView.m */; };
 		DA54E4F2163A1E80003A224F /* MDCRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */; };
 		DA54E4F6163A23D4003A224F /* MDCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54E4F5163A23D4003A224F /* MDCWebViewController.m */; };
+		DA5EB3FF163A51C800102963 /* IntegrationTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5EB3FE163A51C800102963 /* IntegrationTests-Info.plist */; };
 		DA71F478163A3A890096C959 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA71F477163A3A890096C959 /* SenTestingKit.framework */; };
 		DA71F479163A3A890096C959 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA131469163425AC00602299 /* UIKit.framework */; };
 		DA71F47A163A3A890096C959 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13146B163425AC00602299 /* Foundation.framework */; };
@@ -77,6 +78,7 @@
 		DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCRootTableViewController.m; sourceTree = "<group>"; };
 		DA54E4F4163A23D4003A224F /* MDCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCWebViewController.h; sourceTree = "<group>"; };
 		DA54E4F5163A23D4003A224F /* MDCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCWebViewController.m; sourceTree = "<group>"; };
+		DA5EB3FE163A51C800102963 /* IntegrationTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "IntegrationTests-Info.plist"; sourceTree = "<group>"; };
 		DA71F476163A3A890096C959 /* MDCStateMachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDCStateMachineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA71F477163A3A890096C959 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DA71F47D163A3A890096C959 /* MDCStateMachineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDCStateMachineTests-Info.plist"; sourceTree = "<group>"; };
@@ -87,7 +89,6 @@
 		DA97A1DA163A10110098704E /* MDCState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCState.h; sourceTree = "<group>"; };
 		DA97A1DB163A10110098704E /* MDCState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCState.m; sourceTree = "<group>"; };
 		DABECFB5163A418500643479 /* MDCStateMachine Integration Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDCStateMachine Integration Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DABECFB7163A418500643479 /* MDCStateMachine copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MDCStateMachine copy-Info.plist"; path = "/Users/bgesiak/Github/github/modocache/MDCStateMachine/MDCStateMachine copy-Info.plist"; sourceTree = "<absolute>"; };
 		DABECFC3163A42E000643479 /* MDCTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCTestController.h; sourceTree = "<group>"; };
 		DABECFC4163A42E000643479 /* MDCTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCTestController.m; sourceTree = "<group>"; };
 		DABECFC7163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+MDCInputSwitchViewController.h"; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 				DA131468163425AC00602299 /* Frameworks */,
 				DA131466163425AC00602299 /* Products */,
 				A1869160DDD547A88AB2C14B /* Pods-test.xcconfig */,
-				DABECFB7163A418500643479 /* MDCStateMachine copy-Info.plist */,
 				5D90D782B03C4F99ACB09201 /* Pods-integration_test.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -243,6 +243,7 @@
 		DABECFC1163A42C000643479 /* IntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA5EB3FE163A51C800102963 /* IntegrationTests-Info.plist */,
 				DABECFC3163A42E000643479 /* MDCTestController.h */,
 				DABECFC4163A42E000643479 /* MDCTestController.m */,
 				DABECFC6163A435000643479 /* Scenarios */,
@@ -377,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DABECFB1163A418500643479 /* InfoPlist.strings in Resources */,
+				DA5EB3FF163A51C800102963 /* IntegrationTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +616,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MDCStateMachine/MDCStateMachine-Prefix.pch";
-				INFOPLIST_FILE = "MDCStateMachine copy-Info.plist";
+				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
 				PRODUCT_NAME = "MDCStateMachine Integration Tests";
 				WRAPPER_EXTENSION = app;
 			};
@@ -626,7 +628,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MDCStateMachine/MDCStateMachine-Prefix.pch";
-				INFOPLIST_FILE = "MDCStateMachine copy-Info.plist";
+				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
 				PRODUCT_NAME = "MDCStateMachine Integration Tests";
 				WRAPPER_EXTENSION = app;
 			};
