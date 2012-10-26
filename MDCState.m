@@ -37,8 +37,11 @@
 #pragma mark - Public Interface
 
 - (void)exit {
-    NSLog(@"%@:%@", [self class], NSStringFromSelector(_cmd));
     [self.delegate stateDidExit:self];
+}
+
+- (void)exitAfterDelay:(NSTimeInterval)delay {
+    [self performSelector:@selector(exit) withObject:nil afterDelay:delay];
 }
 
 @end

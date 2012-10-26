@@ -38,6 +38,7 @@ typedef void (^MDCStateExitBlock)(void);
 @property (nonatomic, strong) MDCStateEnterBlock onEnter;
 @property (nonatomic, strong) MDCStateExitBlock onExit;
 - (void)exit;
+- (void)exitAfterDelay:(NSTimeInterval)delay;
 @end
 
 

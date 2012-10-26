@@ -88,24 +88,20 @@ static CGFloat const kTextFieldHeight = 40.0f;
 
     self.editTextFieldState = [MDCState new];
     self.editTextFieldState.onEnter = ^{
-        NSLog(@"self.editTextFieldState.onEnter");
         [textField becomeFirstResponder];
     };
     self.editTextFieldState.onExit = ^{
-        NSLog(@"self.editTextFieldState.onExit");
         [textField resignFirstResponder];
-        [self.editTextFieldState exit];
+        [self.editTextFieldState exitAfterDelay:0.5];
     };
     
     self.editCustomInputViewTextFieldState = [MDCState new];
     self.editCustomInputViewTextFieldState.onEnter = ^{
-        NSLog(@"self.customInputViewTextFieldState.onEnter");
         [customInputViewTextField becomeFirstResponder];
     };
     self.editCustomInputViewTextFieldState.onExit = ^{
-        NSLog(@"self.customInputViewTextFieldState.onEnter");
         [customInputViewTextField resignFirstResponder];
-        [self.editCustomInputViewTextFieldState exit];
+        [self.editCustomInputViewTextFieldState exitAfterDelay:0.5];
     };
     
     self.stateContext = [[MDCStateContext alloc] initWithState:self.defaultState];
@@ -125,7 +121,6 @@ static CGFloat const kTextFieldHeight = 40.0f;
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if ([textField isEqual:self.textField]) {
-        NSLog(@"%@:%@ -- self.textField", [self class], NSStringFromSelector(_cmd));
         if ([self.stateContext.currentState isEqual:self.editTextFieldState]) {
             return YES;
         } else {
@@ -133,7 +128,6 @@ static CGFloat const kTextFieldHeight = 40.0f;
             return NO;
         }
     } else {
-        NSLog(@"%@:%@ -- self.customInputViewTextField", [self class], NSStringFromSelector(_cmd));
         if ([self.stateContext.currentState isEqual:self.editCustomInputViewTextFieldState]) {
             return YES;
         } else {

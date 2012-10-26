@@ -39,7 +39,6 @@
 - (id)initWithState:(MDCState *)state {
     self = [super init];
     if (self) {
-        NSLog(@"%@:%@ -- state[%@]", [self class], NSStringFromSelector(_cmd), state);
         _currentState = state;
         if (_currentState.onEnter) {
             _currentState.onEnter();
@@ -52,8 +51,7 @@
 #pragma mark - Public Interface
 
 - (void)transitionToState:(MDCState *)state {
-    NSLog(@"%@:%@ -- state[%@]", [self class], NSStringFromSelector(_cmd), state);
-    if ([state isEqual:self.currentState]) {
+    if ([state isEqual:self.currentState] || self.nextState) {
         return;
     }
     
@@ -69,7 +67,6 @@
 #pragma mark - MDCStateDelegate Protocol Methods
 
 - (void)stateDidExit:(MDCState *)state {
-    NSLog(@"%@:%@ -- state[%@], self.nextState[%@]", [self class], NSStringFromSelector(_cmd), state, self.nextState);
     _currentState = self.nextState;
     
     if (self.nextState.onEnter) {
