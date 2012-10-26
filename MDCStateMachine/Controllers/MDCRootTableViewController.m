@@ -24,7 +24,9 @@
 
 
 #import "MDCRootTableViewController.h"
+
 #import "MDCInputSwitchViewController.h"
+#import "MDCWebViewController.h"
 
 
 @interface MDCRootTableViewController ()
@@ -40,7 +42,10 @@
 - (id)init {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        _viewControllers = @[ [MDCInputSwitchViewController class] ];
+        _viewControllers = @[
+            [MDCInputSwitchViewController class],
+            [MDCWebViewController class]
+        ];
     }
     return self;
 }

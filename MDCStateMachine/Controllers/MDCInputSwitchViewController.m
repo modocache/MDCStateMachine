@@ -120,9 +120,15 @@ static CGFloat const kTextFieldHeight = 40.0f;
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
     self.textField = nil;
     self.customInputViewTextField = nil;
+
+    self.stateContext = nil;
+    self.defaultState = nil;
+    self.editTextFieldState = nil;
+    self.editCustomInputViewTextFieldState = nil;
+
+    [super didReceiveMemoryWarning];
 }
 
 
