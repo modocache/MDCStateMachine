@@ -1,4 +1,4 @@
-//  MDCAppDelegate.m
+//  KIFTestScenario+MDCInputSwitchViewController.m
 //
 //  Copyright (c) 2012 modocache
 //
@@ -23,36 +23,20 @@
 //
 
 
-#import "MDCAppDelegate.h"
-#import "MDCRootTableViewController.h"
-
-#ifdef RUN_KIF_TESTS
-#import "MDCTestController.h"
-#endif
+#import "KIFTestScenario+MDCInputSwitchViewController.h"
+#import "KIFTestStep+MDCRootTableViewController.h"
 
 
-@implementation MDCAppDelegate
+@implementation KIFTestScenario (MDCInputSwitchViewController)
 
 
-#pragma mark - UIApplicationDelegate Protocol Methods
+#pragma mark - Public Interface
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    UINavigationController *navigationController =
-        [[UINavigationController alloc] initWithRootViewController:[MDCRootTableViewController new]];
-    self.window.rootViewController = navigationController;
-
-    [self.window makeKeyAndVisible];
-    
-#ifdef RUN_KIF_TESTS
-    [[MDCTestController sharedInstance] startTestingWithCompletionBlock:^{
-        exit([[MDCTestController sharedInstance] failureCount]);
-    }];
-#endif
-    
-    return YES;
++ (id)scenarioToSwitchBetweenInputViews {
+    KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Switch rapidly between input views."];
+    [scenario addStep:[KIFTestStep stepToPushSampleViewController:MDCInputSwitchViewControllerClass]];
+    [scenario addStep:[KIFTestStep stepToPopViewController]];
+    return scenario;
 }
 
 @end

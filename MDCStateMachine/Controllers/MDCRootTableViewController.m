@@ -56,6 +56,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"Samples", nil);
+    self.tableView.accessibilityLabel = NSLocalizedString(@"Sample View Controllers", nil);
 }
 
 

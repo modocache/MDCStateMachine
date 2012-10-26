@@ -1,4 +1,4 @@
-//  MDCAppDelegate.m
+//  KIFTestStep+MDCRootTableViewController.m
 //
 //  Copyright (c) 2012 modocache
 //
@@ -23,36 +23,23 @@
 //
 
 
-#import "MDCAppDelegate.h"
-#import "MDCRootTableViewController.h"
-
-#ifdef RUN_KIF_TESTS
-#import "MDCTestController.h"
-#endif
+#import "KIFTestStep+MDCRootTableViewController.h"
 
 
-@implementation MDCAppDelegate
+@implementation KIFTestStep (MDCRootTableViewController)
 
 
-#pragma mark - UIApplicationDelegate Protocol Methods
+#pragma mark - Public Interface
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
++ (id)stepToPushSampleViewController:(MDCSampleViewControllerClass)viewControllerClass {
+    NSString *label = NSLocalizedString(@"Sample View Controllers", nil);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:viewControllerClass inSection:0];
+    return [KIFTestStep stepToTapRowInTableViewWithAccessibilityLabel:label
+                                                          atIndexPath:indexPath];
+}
 
-    UINavigationController *navigationController =
-        [[UINavigationController alloc] initWithRootViewController:[MDCRootTableViewController new]];
-    self.window.rootViewController = navigationController;
-
-    [self.window makeKeyAndVisible];
-    
-#ifdef RUN_KIF_TESTS
-    [[MDCTestController sharedInstance] startTestingWithCompletionBlock:^{
-        exit([[MDCTestController sharedInstance] failureCount]);
-    }];
-#endif
-    
-    return YES;
++ (id)stepToPopViewController {
+    return [KIFTestStep stepToTapViewWithAccessibilityLabel:NSLocalizedString(@"Samples", nil)];
 }
 
 @end

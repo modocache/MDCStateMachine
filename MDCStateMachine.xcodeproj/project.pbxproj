@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720D1105F4D44336A00113ED /* libPods-integration_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8340A6AEA3D485998D9E8B7 /* libPods-integration_test.a */; };
 		AA78D5342EDA40939B2D08FF /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C5BFF98055451DBE440E39 /* libPods-test.a */; };
 		DA13146A163425AC00602299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA131469163425AC00602299 /* UIKit.framework */; };
 		DA13146C163425AC00602299 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13146B163425AC00602299 /* Foundation.framework */; };
@@ -24,6 +25,21 @@
 		DA71F480163A3A890096C959 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA71F47E163A3A890096C959 /* InfoPlist.strings */; };
 		DA97A1D8163A0D100098704E /* MDCStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1D7163A0D100098704E /* MDCStateContext.m */; };
 		DA97A1DC163A10110098704E /* MDCState.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1DB163A10110098704E /* MDCState.m */; };
+		DABECFA4163A418500643479 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131475163425AC00602299 /* main.m */; };
+		DABECFA5163A418500643479 /* MDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131479163425AC00602299 /* MDCAppDelegate.m */; };
+		DABECFA6163A418500643479 /* MDCInputSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148A163429E000602299 /* MDCInputSwitchViewController.m */; };
+		DABECFA7163A418500643479 /* MDCInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148E16342E5100602299 /* MDCInputView.m */; };
+		DABECFA8163A418500643479 /* MDCStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1D7163A0D100098704E /* MDCStateContext.m */; };
+		DABECFA9163A418500643479 /* MDCState.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1DB163A10110098704E /* MDCState.m */; };
+		DABECFAA163A418500643479 /* MDCRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */; };
+		DABECFAB163A418500643479 /* MDCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54E4F5163A23D4003A224F /* MDCWebViewController.m */; };
+		DABECFAD163A418500643479 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA131469163425AC00602299 /* UIKit.framework */; };
+		DABECFAE163A418500643479 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13146B163425AC00602299 /* Foundation.framework */; };
+		DABECFAF163A418500643479 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13146D163425AC00602299 /* CoreGraphics.framework */; };
+		DABECFB1163A418500643479 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA131472163425AC00602299 /* InfoPlist.strings */; };
+		DABECFC5163A42E000643479 /* MDCTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABECFC4163A42E000643479 /* MDCTestController.m */; };
+		DABECFC9163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABECFC8163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.m */; };
+		DABECFCD163A455700643479 /* KIFTestStep+MDCRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABECFCC163A455700643479 /* KIFTestStep+MDCRootTableViewController.m */; };
 		DAD715C2163A3AFF00DFF4E5 /* MDCStateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD715C1163A3AFF00DFF4E5 /* MDCStateSpec.m */; };
 		DAD715C6163A3D6000DFF4E5 /* MDCStateContextSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD715C5163A3D6000DFF4E5 /* MDCStateContextSpec.m */; };
 /* End PBXBuildFile section */
@@ -39,12 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D90D782B03C4F99ACB09201 /* Pods-integration_test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-integration_test.xcconfig"; path = "Pods/Pods-integration_test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		A1869160DDD547A88AB2C14B /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
+		A8340A6AEA3D485998D9E8B7 /* libPods-integration_test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-integration_test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C5BFF98055451DBE440E39 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA131465163425AC00602299 /* MDCStateMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDCStateMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA131469163425AC00602299 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA13146B163425AC00602299 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DA13146D163425AC00602299 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA13146D163425AC00602299 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DA131471163425AC00602299 /* MDCStateMachine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDCStateMachine-Info.plist"; sourceTree = "<group>"; };
 		DA131473163425AC00602299 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA131475163425AC00602299 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +86,14 @@
 		DA97A1D7163A0D100098704E /* MDCStateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateContext.m; sourceTree = "<group>"; };
 		DA97A1DA163A10110098704E /* MDCState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCState.h; sourceTree = "<group>"; };
 		DA97A1DB163A10110098704E /* MDCState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCState.m; sourceTree = "<group>"; };
+		DABECFB5163A418500643479 /* MDCStateMachine Integration Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDCStateMachine Integration Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABECFB7163A418500643479 /* MDCStateMachine copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MDCStateMachine copy-Info.plist"; path = "/Users/bgesiak/Github/github/modocache/MDCStateMachine/MDCStateMachine copy-Info.plist"; sourceTree = "<absolute>"; };
+		DABECFC3163A42E000643479 /* MDCTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCTestController.h; sourceTree = "<group>"; };
+		DABECFC4163A42E000643479 /* MDCTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCTestController.m; sourceTree = "<group>"; };
+		DABECFC7163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+MDCInputSwitchViewController.h"; sourceTree = "<group>"; };
+		DABECFC8163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+MDCInputSwitchViewController.m"; sourceTree = "<group>"; };
+		DABECFCB163A455700643479 /* KIFTestStep+MDCRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+MDCRootTableViewController.h"; sourceTree = "<group>"; };
+		DABECFCC163A455700643479 /* KIFTestStep+MDCRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+MDCRootTableViewController.m"; sourceTree = "<group>"; };
 		DAD715C1163A3AFF00DFF4E5 /* MDCStateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateSpec.m; sourceTree = "<group>"; };
 		DAD715C5163A3D6000DFF4E5 /* MDCStateContextSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateContextSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +120,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DABECFAC163A418500643479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABECFAD163A418500643479 /* UIKit.framework in Frameworks */,
+				DABECFAE163A418500643479 /* Foundation.framework in Frameworks */,
+				DABECFAF163A418500643479 /* CoreGraphics.framework in Frameworks */,
+				720D1105F4D44336A00113ED /* libPods-integration_test.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,9 +143,12 @@
 				DA97A1DB163A10110098704E /* MDCState.m */,
 				DA13146F163425AC00602299 /* MDCStateMachine */,
 				DA71F47B163A3A890096C959 /* MDCStateMachineTests */,
+				DABECFC1163A42C000643479 /* IntegrationTests */,
 				DA131468163425AC00602299 /* Frameworks */,
 				DA131466163425AC00602299 /* Products */,
 				A1869160DDD547A88AB2C14B /* Pods-test.xcconfig */,
+				DABECFB7163A418500643479 /* MDCStateMachine copy-Info.plist */,
+				5D90D782B03C4F99ACB09201 /* Pods-integration_test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +157,7 @@
 			children = (
 				DA131465163425AC00602299 /* MDCStateMachine.app */,
 				DA71F476163A3A890096C959 /* MDCStateMachineTests.octest */,
+				DABECFB5163A418500643479 /* MDCStateMachine Integration Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +170,7 @@
 				DA13146D163425AC00602299 /* CoreGraphics.framework */,
 				DA71F477163A3A890096C959 /* SenTestingKit.framework */,
 				C8C5BFF98055451DBE440E39 /* libPods-test.a */,
+				A8340A6AEA3D485998D9E8B7 /* libPods-integration_test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -198,6 +240,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DABECFC1163A42C000643479 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				DABECFC3163A42E000643479 /* MDCTestController.h */,
+				DABECFC4163A42E000643479 /* MDCTestController.m */,
+				DABECFC6163A435000643479 /* Scenarios */,
+				DABECFCA163A451100643479 /* Steps */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		DABECFC6163A435000643479 /* Scenarios */ = {
+			isa = PBXGroup;
+			children = (
+				DABECFC7163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.h */,
+				DABECFC8163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.m */,
+			);
+			path = Scenarios;
+			sourceTree = "<group>";
+		};
+		DABECFCA163A451100643479 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				DABECFCB163A455700643479 /* KIFTestStep+MDCRootTableViewController.h */,
+				DABECFCC163A455700643479 /* KIFTestStep+MDCRootTableViewController.m */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +309,24 @@
 			productReference = DA71F476163A3A890096C959 /* MDCStateMachineTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		DABECFA2163A418500643479 /* IntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DABECFB2163A418500643479 /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
+			buildPhases = (
+				DABECFA3163A418500643479 /* Sources */,
+				DABECFAC163A418500643479 /* Frameworks */,
+				DABECFB0163A418500643479 /* Resources */,
+				076A9F59A8CE44A98BCE09A9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntegrationTests;
+			productName = MDCStateMachine;
+			productReference = DABECFB5163A418500643479 /* MDCStateMachine Integration Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -261,6 +350,7 @@
 			targets = (
 				DA131464163425AC00602299 /* MDCStateMachine */,
 				DA71F475163A3A890096C959 /* MDCStateMachineTests */,
+				DABECFA2163A418500643479 /* IntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,9 +372,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DABECFB0163A418500643479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABECFB1163A418500643479 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		076A9F59A8CE44A98BCE09A9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-integration_test-resources.sh\"\n";
+		};
 		9CCEC176271942C680328B3D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +448,24 @@
 			files = (
 				DAD715C2163A3AFF00DFF4E5 /* MDCStateSpec.m in Sources */,
 				DAD715C6163A3D6000DFF4E5 /* MDCStateContextSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DABECFA3163A418500643479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABECFA4163A418500643479 /* main.m in Sources */,
+				DABECFA5163A418500643479 /* MDCAppDelegate.m in Sources */,
+				DABECFA6163A418500643479 /* MDCInputSwitchViewController.m in Sources */,
+				DABECFA7163A418500643479 /* MDCInputView.m in Sources */,
+				DABECFA8163A418500643479 /* MDCStateContext.m in Sources */,
+				DABECFA9163A418500643479 /* MDCState.m in Sources */,
+				DABECFAA163A418500643479 /* MDCRootTableViewController.m in Sources */,
+				DABECFAB163A418500643479 /* MDCWebViewController.m in Sources */,
+				DABECFC5163A42E000643479 /* MDCTestController.m in Sources */,
+				DABECFC9163A43CC00643479 /* KIFTestScenario+MDCInputSwitchViewController.m in Sources */,
+				DABECFCD163A455700643479 /* KIFTestStep+MDCRootTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +608,30 @@
 			};
 			name = Release;
 		};
+		DABECFB3163A418500643479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D90D782B03C4F99ACB09201 /* Pods-integration_test.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDCStateMachine/MDCStateMachine-Prefix.pch";
+				INFOPLIST_FILE = "MDCStateMachine copy-Info.plist";
+				PRODUCT_NAME = "MDCStateMachine Integration Tests";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DABECFB4163A418500643479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D90D782B03C4F99ACB09201 /* Pods-integration_test.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDCStateMachine/MDCStateMachine-Prefix.pch";
+				INFOPLIST_FILE = "MDCStateMachine copy-Info.plist";
+				PRODUCT_NAME = "MDCStateMachine Integration Tests";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -504,6 +658,15 @@
 			buildConfigurations = (
 				DA71F485163A3A890096C959 /* Debug */,
 				DA71F486163A3A890096C959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DABECFB2163A418500643479 /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DABECFB3163A418500643479 /* Debug */,
+				DABECFB4163A418500643479 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
