@@ -13,8 +13,9 @@
 		DA131474163425AC00602299 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA131472163425AC00602299 /* InfoPlist.strings */; };
 		DA131476163425AC00602299 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131475163425AC00602299 /* main.m */; };
 		DA13147A163425AC00602299 /* MDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131479163425AC00602299 /* MDCAppDelegate.m */; };
-		DA13148B163429E000602299 /* MDCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148A163429E000602299 /* MDCRootViewController.m */; };
+		DA13148B163429E000602299 /* MDCInputSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148A163429E000602299 /* MDCInputSwitchViewController.m */; };
 		DA13148F16342E5100602299 /* MDCInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13148E16342E5100602299 /* MDCInputView.m */; };
+		DA54E4F2163A1E80003A224F /* MDCRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */; };
 		DA97A1D8163A0D100098704E /* MDCStateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1D7163A0D100098704E /* MDCStateContext.m */; };
 		DA97A1DC163A10110098704E /* MDCState.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97A1DB163A10110098704E /* MDCState.m */; };
 /* End PBXBuildFile section */
@@ -30,10 +31,12 @@
 		DA131477163425AC00602299 /* MDCStateMachine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDCStateMachine-Prefix.pch"; sourceTree = "<group>"; };
 		DA131478163425AC00602299 /* MDCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCAppDelegate.h; sourceTree = "<group>"; };
 		DA131479163425AC00602299 /* MDCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCAppDelegate.m; sourceTree = "<group>"; };
-		DA131489163429E000602299 /* MDCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCRootViewController.h; sourceTree = "<group>"; };
-		DA13148A163429E000602299 /* MDCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCRootViewController.m; sourceTree = "<group>"; };
+		DA131489163429E000602299 /* MDCInputSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCInputSwitchViewController.h; sourceTree = "<group>"; };
+		DA13148A163429E000602299 /* MDCInputSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCInputSwitchViewController.m; sourceTree = "<group>"; };
 		DA13148D16342E5100602299 /* MDCInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCInputView.h; sourceTree = "<group>"; };
 		DA13148E16342E5100602299 /* MDCInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCInputView.m; sourceTree = "<group>"; };
+		DA54E4F0163A1E80003A224F /* MDCRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCRootTableViewController.h; sourceTree = "<group>"; };
+		DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCRootTableViewController.m; sourceTree = "<group>"; };
 		DA97A1D6163A0D100098704E /* MDCStateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCStateContext.h; sourceTree = "<group>"; };
 		DA97A1D7163A0D100098704E /* MDCStateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStateContext.m; sourceTree = "<group>"; };
 		DA97A1DA163A10110098704E /* MDCState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCState.h; sourceTree = "<group>"; };
@@ -111,8 +114,10 @@
 		DA131488163429CE00602299 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA131489163429E000602299 /* MDCRootViewController.h */,
-				DA13148A163429E000602299 /* MDCRootViewController.m */,
+				DA54E4F0163A1E80003A224F /* MDCRootTableViewController.h */,
+				DA54E4F1163A1E80003A224F /* MDCRootTableViewController.m */,
+				DA131489163429E000602299 /* MDCInputSwitchViewController.h */,
+				DA13148A163429E000602299 /* MDCInputSwitchViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,10 +195,11 @@
 			files = (
 				DA131476163425AC00602299 /* main.m in Sources */,
 				DA13147A163425AC00602299 /* MDCAppDelegate.m in Sources */,
-				DA13148B163429E000602299 /* MDCRootViewController.m in Sources */,
+				DA13148B163429E000602299 /* MDCInputSwitchViewController.m in Sources */,
 				DA13148F16342E5100602299 /* MDCInputView.m in Sources */,
 				DA97A1D8163A0D100098704E /* MDCStateContext.m in Sources */,
 				DA97A1DC163A10110098704E /* MDCState.m in Sources */,
+				DA54E4F2163A1E80003A224F /* MDCRootTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

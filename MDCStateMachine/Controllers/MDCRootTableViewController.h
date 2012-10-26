@@ -1,4 +1,4 @@
-//  MDCRootViewController.h
+//  MDCRootTableViewController.h
 //
 //  Copyright (c) 2012 modocache
 //
@@ -26,6 +26,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MDCRootViewController : UIViewController
+@interface MDCRootTableViewController : UITableViewController
 
 @end

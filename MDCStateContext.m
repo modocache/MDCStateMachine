@@ -50,7 +50,16 @@
 
 #pragma mark - Public Interface
 
-- (void)transitionToState:(MDCState *)state {
+- (void)transitionToState:(MDCState *)state force:(BOOL)force {
+    if (force) {
+        self.nextState = state;
+        if (self.currentState.onExit) {
+            self.currentState.onExit();
+        }
+        [self stateDidExit:self.currentState];
+        return;
+    }
+    
     if ([state isEqual:self.currentState] || self.nextState) {
         return;
     }

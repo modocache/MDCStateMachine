@@ -32,6 +32,6 @@
 @property (nonatomic, readonly) MDCState *currentState;
 
 - (id)initWithState:(MDCState *)state;
-- (void)transitionToState:(MDCState *)state;
+- (void)transitionToState:(MDCState *)state force:(BOOL)force;
 
 @end

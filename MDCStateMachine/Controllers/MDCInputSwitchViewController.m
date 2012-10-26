@@ -1,4 +1,4 @@
-//  MDCRootViewController.m
+//  MDCInputSwitchViewController.m
 //
 //  Copyright (c) 2012 modocache
 //
@@ -23,7 +23,7 @@
 //
 
 
-#import "MDCRootViewController.h"
+#import "MDCInputSwitchViewController.h"
 
 #import "MDCInputView.h"
 #import "MDCStateContext.h"
@@ -35,7 +35,7 @@ static CGFloat const kTextFieldWidth = 200.0f;
 static CGFloat const kTextFieldHeight = 40.0f;
 
 
-@interface MDCRootViewController () <UITextFieldDelegate>
+@interface MDCInputSwitchViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) MDCStateContext *stateContext;
 @property (nonatomic, strong) MDCState *defaultState;
@@ -50,7 +50,7 @@ static CGFloat const kTextFieldHeight = 40.0f;
 @end
 
 
-@implementation MDCRootViewController
+@implementation MDCInputSwitchViewController
 
 
 #pragma mark - UIViewController Overrides
@@ -85,6 +85,10 @@ static CGFloat const kTextFieldHeight = 40.0f;
     __block UITextField *textField = self.textField;
     __block UITextField *customInputViewTextField = self.customInputViewTextField;
     self.defaultState = [MDCState new];
+    self.defaultState.onEnter = ^{
+        [textField resignFirstResponder];
+        [customInputViewTextField resignFirstResponder];
+    };
 
     self.editTextFieldState = [MDCState new];
     self.editTextFieldState.onEnter = ^{
@@ -110,6 +114,11 @@ static CGFloat const kTextFieldHeight = 40.0f;
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.stateContext transitionToState:self.defaultState force:YES];
+    [super viewWillDisappear:animated];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     self.textField = nil;
@@ -124,14 +133,14 @@ static CGFloat const kTextFieldHeight = 40.0f;
         if ([self.stateContext.currentState isEqual:self.editTextFieldState]) {
             return YES;
         } else {
-            [self.stateContext transitionToState:self.editTextFieldState];
+            [self.stateContext transitionToState:self.editTextFieldState force:NO];
             return NO;
         }
     } else {
         if ([self.stateContext.currentState isEqual:self.editCustomInputViewTextFieldState]) {
             return YES;
         } else {
-            [self.stateContext transitionToState:self.editCustomInputViewTextFieldState];
+            [self.stateContext transitionToState:self.editCustomInputViewTextFieldState force:NO];
             return NO;
         }
     }
@@ -142,7 +151,7 @@ static CGFloat const kTextFieldHeight = 40.0f;
 #pragma mark - Internal Methods
 
 - (void)onBackgroundTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-    [self.stateContext transitionToState:self.defaultState];
+    [self.stateContext transitionToState:self.defaultState force:NO];
 }
 
 @end
